@@ -1,0 +1,15 @@
+D:\Projects\AI\GeneticAlgorythm\GeneticAlgorythm\bin\Debug\net7.0\GeneticAlgorythm.exe
+D:\Projects\AI\GeneticAlgorythm\GeneticAlgorythm\bin\Debug\net7.0\GeneticAlgorythm.deps.json
+D:\Projects\AI\GeneticAlgorythm\GeneticAlgorythm\bin\Debug\net7.0\GeneticAlgorythm.runtimeconfig.json
+D:\Projects\AI\GeneticAlgorythm\GeneticAlgorythm\bin\Debug\net7.0\GeneticAlgorythm.dll
+D:\Projects\AI\GeneticAlgorythm\GeneticAlgorythm\bin\Debug\net7.0\GeneticAlgorythm.pdb
+D:\Projects\AI\GeneticAlgorythm\GeneticAlgorythm\obj\Debug\net7.0\GeneticAlgorythm.csproj.AssemblyReference.cache
+D:\Projects\AI\GeneticAlgorythm\GeneticAlgorythm\obj\Debug\net7.0\GeneticAlgorythm.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\AI\GeneticAlgorythm\GeneticAlgorythm\obj\Debug\net7.0\GeneticAlgorythm.AssemblyInfoInputs.cache
+D:\Projects\AI\GeneticAlgorythm\GeneticAlgorythm\obj\Debug\net7.0\GeneticAlgorythm.AssemblyInfo.cs
+D:\Projects\AI\GeneticAlgorythm\GeneticAlgorythm\obj\Debug\net7.0\GeneticAlgorythm.csproj.CoreCompileInputs.cache
+D:\Projects\AI\GeneticAlgorythm\GeneticAlgorythm\obj\Debug\net7.0\GeneticAlgorythm.dll
+D:\Projects\AI\GeneticAlgorythm\GeneticAlgorythm\obj\Debug\net7.0\refint\GeneticAlgorythm.dll
+D:\Projects\AI\GeneticAlgorythm\GeneticAlgorythm\obj\Debug\net7.0\GeneticAlgorythm.pdb
+D:\Projects\AI\GeneticAlgorythm\GeneticAlgorythm\obj\Debug\net7.0\GeneticAlgorythm.genruntimeconfig.cache
+D:\Projects\AI\GeneticAlgorythm\GeneticAlgorythm\obj\Debug\net7.0\ref\GeneticAlgorythm.dll
