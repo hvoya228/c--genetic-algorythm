@@ -4,8 +4,7 @@
 
     public static double FitnessFunction(double x)
     {
-        // Функція для максимізації (f(x) = 2x^2 + 1)
-        return 2 * Math.Pow(x, 2) + 1;
+        return Math.Pow(x, 2) + 2;
     }
 
     public static string DecimalToBinary(int decimalNumber, int numberOfBits)
@@ -22,14 +21,24 @@
 
     public static List<string> InitializePopulation(int populationSize, int numberOfBits, int chromosomeSize)
     {
-        // Створення початкової популяції
         List<string> population = new List<string>();
+
         for (int i = 0; i < populationSize; i++)
         {
             int randomDecimal = random.Next(0, (int)Math.Pow(2, numberOfBits));
             string binaryRepresentation = DecimalToBinary(randomDecimal, numberOfBits);
-            population.Add(binaryRepresentation.PadLeft(chromosomeSize * numberOfBits, '0'));
+
+            var individual = binaryRepresentation.PadLeft(chromosomeSize * numberOfBits, '0');
+
+            if (population.Contains(individual))
+            {
+                i--;
+                continue;
+            }
+
+            population.Add(individual);
         }
+
         return population;
     }
 
@@ -52,5 +61,23 @@
             }
         }
         individual = new string(genes);
+    }
+
+    // Метод вибору індексу батька за допомогою рулетки
+    public static int SelectParentIndexByRoulette(double[] fitnessScores, double totalFitness)
+    {
+        double randomValue = random.NextDouble() * totalFitness;
+        double cumulativeFitness = 0;
+
+        for (int i = 0; i < fitnessScores.Length; i++)
+        {
+            cumulativeFitness += fitnessScores[i];
+            if (cumulativeFitness >= randomValue)
+            {
+                return i;
+            }
+        }
+
+        return fitnessScores.Length - 1;
     }
 }

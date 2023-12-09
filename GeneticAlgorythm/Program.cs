@@ -1,8 +1,7 @@
-﻿
-int populationSize = 50; // кількість індивідумів у популяції
+﻿int populationSize = 50; // кількість індивідумів у популяції
 int numberOfBits = 8; // кількість символів в одній хромосомі
 int chromosomeSize = 4; // кількість хромосом в індивідума
-int generations = 100; // кількість поколінь
+int generations = 1000; // кількість поколінь
 double mutationRate = 0.01; // ймовірність мутації
 
 // Ініціалізація початкової популяції
@@ -12,11 +11,28 @@ for (int generation = 0; generation < generations; generation++)
 {
     // Створення нової популяції
     List<string> newPopulation = new List<string>();
+
+    // Розрахунок фітнесу
+    double[] fitnessScores = new double[populationSize];
+    double totalFitness = 0;
+
+    for (int i = 0; i < populationSize; i++)
+    {
+        string individual = population[i];
+        double fitness = GeneticAlgorythm.FitnessFunction(GeneticAlgorythm.BinaryToDecimal(individual));
+
+        fitnessScores[i] = fitness;
+        totalFitness += fitness;
+    }
+
     for (int i = 0; i < populationSize; i += 2)
     {
         // Вибір батьків
-        string parent1 = population[i];
-        string parent2 = population[i + 1];
+        int parentIndex1 = GeneticAlgorythm.SelectParentIndexByRoulette(fitnessScores, totalFitness);
+        int parentIndex2 = GeneticAlgorythm.SelectParentIndexByRoulette(fitnessScores, totalFitness);
+
+        string parent1 = population[parentIndex1];
+        string parent2 = population[parentIndex2];
 
         // Кросовер
         string child1 = GeneticAlgorythm.Crossover(parent1, parent2);
